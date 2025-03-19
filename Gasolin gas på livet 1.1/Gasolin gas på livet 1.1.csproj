@@ -7,9 +7,4 @@
     <RootNamespace>Gasolin_gas_på_livet_1._1</RootNamespace>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="wwwroot\NewFolder1\" />
-    <Folder Include="wwwroot\NewFolder\" />
-  </ItemGroup>
-
 </Project>
