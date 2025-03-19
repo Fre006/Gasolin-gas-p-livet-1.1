@@ -1,0 +1,45 @@
+﻿.Ragnarokred { background-color:#ba0000
+}
+.GoldStandard {
+    background-color: #D4AF37
+}
+.NavyBlueweb{
+    background-color:#00053a
+}
+.IndexFont {
+    color: #00053a;
+
+}
+.AnimationDiv {
+    width: 20%;
+    height: 20%;
+    position: relative;
+    animation-name: backgroundanimation;
+    animation-duration: 4s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+} 
+body{
+}
+@keyframes backgroundanimation {
+    0% {
+background-image: url('../images/bass-guitar-sandberg-california-tm-5-1630005008.png');
+    left:0%;
+    }
+    25% {
+        background-image: url('../images/guitarpng.parspng.com-6-1593042169.png');
+        left: 25%;
+    }
+    50% {
+        background-image: url('../images/microphone-clipart-png-1-4113358035.png');
+        left: 50%;
+    }
+    75% {
+        background-image: url('../images/snare_drum_marching_band_percussion_instrument-1024-3508275597.png');
+        left: 75%;
+    }
+    100% {
+        background-image: url('../images/bass-guitar-sandberg-california-tm-5-1630005008.png');
+        left: 100%;
+    }
+}
