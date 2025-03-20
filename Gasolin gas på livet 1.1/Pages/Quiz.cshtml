@@ -1,0 +1,43 @@
+﻿@page
+@model PortofolioRAZOR.Pages.QuizModel
+@{
+}
+<h2>Velkommen til Ragnarocks Gasolin Quiz!</h2>
+<h5> Svar rigtigt på alle spørgsmål, vis os resultatet, og vind en Rød Tuborg<small>*</small></h5>
+<form method="post">
+	@for (int i = 0; i < Model.Questions.Length; i++)
+	{
+		<br />
+		<div class="mb-3">
+			<p><strong>@Model.Questions[i]</strong></p>
+		</div>
+		<div class="form-check">
+			<input type="radio" class="form-check-input" id="radio1" name="UserAnswers[@i]" value="0" checked>
+			<label class="form-check-label" for="radio1">@Model.Answers[i * 3]</label>
+		</div>
+		<div class="form-check">
+			<input type="radio" class="form-check-input" id="radio2" name="UserAnswers[@i]" value="1">
+			<label class="form-check-label" for="radio2">@Model.Answers[i * 3 + 1]</label>
+		</div>
+		<div class="form-check">
+			<input type="radio" class="form-check-input" id="radio3" name="UserAnswers[@i]" value="2">
+			<label class="form-check-label" for="radio3">@Model.Answers[i * 3 + 2]</label>
+		</div>
+	}
+	</br>
+	<button type="submit" class="btn btn-warning">Send svar</button>
+</form>
+
+@if (Model.PlayerScore < 5)
+{
+	<p id="quizResult" style="font-weight: bold; margin-top: 20px;">
+		Du fik @Model.PlayerScore ud af @Model.Questions.Length rigtige! Prøv igen.
+	</p>
+}
+else
+{
+	<p id="quizResult2" style="font-weight: bold; margin-top: 20px;">
+		Tillykke! Du har vundet en Rød Tuborg! 🍻
+	</p>
+}
+<p><small>*OBS. Kun én gevinst per person</small></p>
