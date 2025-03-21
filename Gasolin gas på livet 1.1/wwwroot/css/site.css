@@ -39,6 +39,10 @@ body {
  height: auto;
 
 }
+.imgBigger{
+    width: 75%;
+    height: auto;
+}
 p2{
 {
     box-sizing: border-box;
