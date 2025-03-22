@@ -24,7 +24,7 @@ namespace PortofolioRAZOR.Pages
         };
 
         public int[] CorrectAnswers = { 0, 1, 2, 0, 1 };
-        public int PlayerScore { get; set; } = 0;
+        public int PlayerScore;
 
         [BindProperty]
         public int[] UserAnswers { get; set; } = new int[5];
